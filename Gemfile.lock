@@ -17,5 +17,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  passenger (~> 4.0.16)
+  passenger (>= 4.0.16)
   sinatra (= 1.1.0)
