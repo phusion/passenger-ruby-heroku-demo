@@ -80,4 +80,6 @@ Any configuration is done by customizing the arguments passed to the `passenger`
  * Using Phusion Passenger on Heroku? [Tweet about us](https://twitter.com/share) or [fork us on Github](https://github.com/phusion/passenger).
  * Having problems? Please post a message at [the community discussion forum](https://groups.google.com/d/forum/phusion-passenger‎).
 
+[<img src="http://www.phusion.nl/assets/logo.png">](http://www.phusion.nl/)
+
 Please enjoy Phusion Passenger, a product by [Phusion](http://www.phusion.nl/). :-)
