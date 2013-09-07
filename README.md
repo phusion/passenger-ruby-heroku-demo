@@ -23,6 +23,12 @@ More information about Phusion Passenger:
  * [Community discussion forum](https://groups.google.com/d/forum/phusion-passenger‎)
  * [Issue tracker](https://code.google.com/p/phusion-passenger/issues/list)
 
+## What people say
+
+<img src="http://blog.phusion.nl/wp-content/uploads/2013/09/heroku-tweet.png">
+
+[Tweet about us too](https://twitter.com/share)
+
 ## Creating a new app
 
 Clone this repository and push it to Heroku:
