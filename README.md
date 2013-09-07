@@ -39,7 +39,7 @@ Your app is now powered by Phusion Passenger!
 
 Phusion Passenger is a drop-in replacement for Thin and Unicorn and very easy to install.
 
-Open your app's Gemfile. Remove the following lines of they exist:
+Open your app's Gemfile. Remove the following lines if they exist:
 
     gem "unicorn"
     gem "thin"
