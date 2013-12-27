@@ -26,6 +26,7 @@ More information about Phusion Passenger:
 ## What people say
 
 <img src="http://blog.phusion.nl/wp-content/uploads/2013/09/heroku-tweet.png">
+<img src="http://blog.phusion.nl/wp-content/uploads/2013/11/heroku-tweet.png">
 
 [Tweet about us too](https://twitter.com/share) or [follow us on Twitter](https://twitter.com/phusion_nl).
 
