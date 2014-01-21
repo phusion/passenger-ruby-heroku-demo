@@ -6,6 +6,8 @@ Phusion Passenger for Heroku brings *the power of Nginx* to your dynos. Nginx is
 
 <center><a href="https://www.phusionpassenger.com/"><img src="http://blog.phusion.nl/wp-content/uploads/2009/04/nginx_passenger_eyecatcher.png" height="150"></a></center>
 
+<center><a href="http://vimeo.com/phusionnl/review/80475623/c16e940d1f"><img src="http://blog.phusion.nl/wp-content/uploads/2014/01/gameofthrones.jpg" height="250"></a></center>
+
 Here's a list of the benefits that using Phusion Passenger will bring you:
 
  * **Static asset acceleration through Nginx** - Don't let your Ruby app serve static assets, let Nginx do it for you and offload your app for the really important tasks. Nginx will do a much better job.
@@ -25,7 +27,6 @@ More information about Phusion Passenger:
 
 ## What people say
 
-<a href="http://vimeo.com/phusionnl/review/80475623/c16e940d1f"><img src="http://blog.phusion.nl/wp-content/uploads/2014/01/gameofthrones.jpg" height="250"></a>
 <img src="http://blog.phusion.nl/wp-content/uploads/2013/09/heroku-tweet.png">
 <img src="http://blog.phusion.nl/wp-content/uploads/2013/11/heroku-tweet.png">
 
