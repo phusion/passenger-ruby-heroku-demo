@@ -22,8 +22,8 @@ More information about Phusion Passenger:
  * [Website](https://www.phusionpassenger.com/)
  * [Documentation and support](https://www.phusionpassenger.com/)
  * [Source code](https://github.com/phusion/passenger)
- * [Community discussion forum](https://groups.google.com/d/forum/phusion-passenger‎)
- * [Issue tracker](https://code.google.com/p/phusion-passenger/issues/list)
+ * [Community discussion forum](https://groups.google.com/d/forum/phusion-passenger)
+ * [Issue tracker](https://github.com/phusion/passenger/issues)
 
 ## What people say
 
