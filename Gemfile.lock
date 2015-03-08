@@ -1,13 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    daemon_controller (1.2.0)
-    passenger (4.0.42)
-      daemon_controller (>= 1.2.0)
+    passenger (5.0.2)
       rack
       rake (>= 0.8.1)
-    rack (1.5.2)
-    rake (10.3.1)
+    rack (1.6.0)
+    rake (10.4.2)
     sinatra (1.1.0)
       rack (~> 1.1)
       tilt (~> 1.1)
@@ -17,5 +15,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  passenger (>= 4.0.42)
+  passenger (>= 5.0.2)
   sinatra (= 1.1.0)
