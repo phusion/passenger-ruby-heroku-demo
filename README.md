@@ -98,7 +98,7 @@ Here are the  instructions for running Passenger Enterprise on Heroku:
         source "https://download:#{your_download_key}@www.phusionpassenger.com/enterprise_gems"
         gem 'passenger-enterprise-server', '>= 4.0.16'
 
-    'your_download_key' can be found in the Customer Area.
+    'your_download_key' can be found in the [Customer Area](https://www.phusionpassenger.com/orders).
 
  2. Download the license key to your local workstation. Save it somewhere, e.g. to ~/passenger-enterprise-license.
  3. Transfer the contents of the license key to a Heroku  environment variable:
