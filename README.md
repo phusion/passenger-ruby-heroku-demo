@@ -84,6 +84,32 @@ Any configuration is done by customizing the arguments passed to the `passenger`
  * `--spawn-method` - By default, Phusion Passenger preloads your app and utilizes copy-on-write (the "smart" spawning method). You can disable this by setting this option to `direct`.
  * `--no-friendly-error-pages` - If your app fails to start, Phusion Passenger will tell you by showing a friendly error page in the browser. This option disables it.
 
+## Enterprise
+
+You can also use [Phusion Passenger Enterprise](https://www.phusionpassenger.com/enterprise) on Heroku, but with some caveats:
+
+ * Passenger Enterprise's rolling restarts don't work. You need to use Heroku's preboot facility for that.
+ * Administration tools such as passenger-status and  passenger-memory-stats don't work because Heroku does not allow SSH  access.
+
+Here are the  instructions for running Passenger Enterprise on Heroku:
+
+ 1. Add the Enterprise repo and gem to your Gemfile:
+
+        source "https://download:#{your_download_key}@www.phusionpassenger.com/enterprise_gems"
+        gem 'passenger-enterprise-server', '>= 4.0.16'
+
+    'your_download_key' can be found in the Customer Area.
+
+ 2. Download the license key to your local workstation. Save it somewhere, e.g. to ~/passenger-enterprise-license.
+ 3. Transfer the contents of the license key to a Heroku  environment variable:
+
+        heroku config:set PASSENGER_ENTERPRISE_LICENSE_DATA="`cat  ~/passenger-enterprise-license`"
+
+ 4. Commit and push to Heroku:
+
+        git commit -a -m "Use Phusion Passenger Enterprise"
+        git push heroku master
+
 ## Next steps
 
  * Using Phusion Passenger on Heroku? [Tweet about us](https://twitter.com/share), [follow us on Twitter](https://twitter.com/phusion_nl) or [fork us on Github](https://github.com/phusion/passenger).
