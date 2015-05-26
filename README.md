@@ -84,14 +84,21 @@ Any configuration is done by customizing the arguments passed to the `passenger`
  * `--spawn-method` - By default, Phusion Passenger preloads your app and utilizes copy-on-write (the "smart" spawning method). You can disable this by setting this option to `direct`.
  * `--no-friendly-error-pages` - If your app fails to start, Phusion Passenger will tell you by showing a friendly error page in the browser. This option disables it.
 
+## Status service
+
+Passenger provides the `passenger-status` command, which displays a status report that tells you what application processes are currently running, how much memory and CPU they use, how many requests are being handled, etc.
+
+However, `passenger-status` doesn't work out-of-the-box on Heroku because Heroku does not allow SSH access to its servers. For this reason, we have created the [Passenger Status Service](https://status-service.phusionpassenger.com/) for making Passenger status reports work.
+
+Please visit [https://status-service.phusionpassenger.com/](https://status-service.phusionpassenger.com/) for more information.
+
 ## Enterprise
 
-You can also use [Phusion Passenger Enterprise](https://www.phusionpassenger.com/enterprise) on Heroku, but with some caveats:
+You can also use [Phusion Passenger Enterprise](https://www.phusionpassenger.com/enterprise) on Heroku, but with a caveat:
 
- * Passenger Enterprise's rolling restarts don't work. You need to use Heroku's preboot facility for that.
- * Administration tools such as passenger-status and  passenger-memory-stats don't work because Heroku does not allow SSH  access.
+ * Passenger Enterprise's rolling restarts don't work. You need to use [Heroku's preboot facility](https://devcenter.heroku.com/articles/preboot) for that.
 
-Here are the  instructions for running Passenger Enterprise on Heroku:
+Here are the instructions for running Passenger Enterprise on Heroku:
 
  1. Add the Enterprise repo and gem to your Gemfile:
 
