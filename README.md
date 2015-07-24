@@ -53,6 +53,7 @@ Open your app's Gemfile. Remove the following lines if they exist:
 
     gem "unicorn"
     gem "thin"
+    gem "puma"
 
 Insert:
 
@@ -63,6 +64,7 @@ Open your app's Procfile, or create one if you don't already have one. Remove li
     web: bundle exec ruby web.rb -p $PORT
     web: bundle exec unicorn -p $PORT
     web: bundle exec thin start -p $PORT
+    web: bundle exec puma -p $PORT
 
 Insert:
 
