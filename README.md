@@ -20,7 +20,8 @@ Here's a list of the benefits that using Phusion Passenger will bring you:
 More information about Phusion Passenger:
 
  * [Website](https://www.phusionpassenger.com/)
- * [Documentation and support](https://www.phusionpassenger.com/)
+ * [Documentation](https://www.phusionpassenger.com/library/)
+ * [Support](https://www.phusionpassenger.com/support/)
  * [Source code](https://github.com/phusion/passenger)
  * [Community discussion forum](https://groups.google.com/d/forum/phusion-passenger)
  * [Issue tracker](https://github.com/phusion/passenger/issues)
@@ -87,9 +88,11 @@ Any configuration is done by customizing the arguments passed to the `passenger`
  * `--spawn-method` - By default, Phusion Passenger preloads your app and utilizes copy-on-write (the "smart" spawning method). You can disable this by setting this option to `direct`.
  * `--no-friendly-error-pages` - If your app fails to start, Phusion Passenger will tell you by showing a friendly error page in the browser. This option disables it.
 
+Please refer to the [configuration reference](https://www.phusionpassenger.com/library/config/standalone/reference/) for more information.
+
 ## Status service
 
-Passenger provides the `passenger-status` command, which displays a status report that tells you what application processes are currently running, how much memory and CPU they use, how many requests are being handled, etc.
+Passenger provides [the `passenger-status` command](https://www.phusionpassenger.com/library/admin/standalone/overall_status_report.html), which displays a status report that tells you what application processes are currently running, how much memory and CPU they use, how many requests are being handled, etc.
 
 However, `passenger-status` doesn't work out-of-the-box on Heroku because Heroku does not allow SSH access to its servers. For this reason, we have created the [Passenger Status Service](https://status-service.phusionpassenger.com/) for making Passenger status reports work.
 
