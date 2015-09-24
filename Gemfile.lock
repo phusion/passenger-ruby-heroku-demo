@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    passenger (5.0.15)
+    passenger (5.0.18)
       rack
       rake (>= 0.8.1)
     rack (1.6.0)
