@@ -109,7 +109,7 @@ Here are the instructions for running Passenger Enterprise on Heroku:
  1. Add the Enterprise repo and gem to your Gemfile:
 
         source "https://download:#{your_download_key}@www.phusionpassenger.com/enterprise_gems"
-        gem 'passenger-enterprise-server', '>= 4.0.16'
+        gem 'passenger-enterprise-server', '>= 5.0.22'
 
     'your_download_key' can be found in the [Customer Area](https://www.phusionpassenger.com/orders).
 
