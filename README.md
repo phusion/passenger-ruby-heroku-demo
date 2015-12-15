@@ -98,7 +98,7 @@ However, `passenger-status` doesn't work out-of-the-box on Heroku because Heroku
 
 Please visit [https://status-service.phusionpassenger.com/](https://status-service.phusionpassenger.com/) for more information.
 
-## Enterprise
+## Passenger Enterprise
 
 You can also use [Phusion Passenger Enterprise](https://www.phusionpassenger.com/enterprise) on Heroku, but with a caveat:
 
@@ -122,6 +122,68 @@ Here are the instructions for running Passenger Enterprise on Heroku:
 
         git commit -a -m "Use Phusion Passenger Enterprise"
         git push heroku master
+
+### Using Passenger open source in development, Enterprise in staging and production
+
+It is possible to use Passenger open source in development, while using Passenger Enterprise in staging production. This works by creating a binstub `bin/passenger` which will start either Passenger open source or Passenger enterprise, depending on the value of the `RAILS_ENV` environment variable. Then the user must use the `bin/passenger` binstub instead of using the `passenger` command directly.
+
+First, ensure that your Gemfile contains both 'passenger' and 'passenger-enterprise-server' but in different groups, like this:
+
+    source 'https://rubygems.org'
+    source "https://download:#{your_download_key}@www.phusionpassenger.com/enterprise_gems"
+
+    group :development do
+      gem 'passenger', '>= 5.0.22'
+    end
+
+    group :staging, :production do
+      gem 'passenger-enterprise-server', '>= 5.0.22'
+    end
+
+Second, create a binstub `bin/passenger`. This binstub will start Passenger open source in development, Passenger Enterprise in staging and production. The binstub must contain:
+
+    #!/usr/bin/env ruby
+
+    require 'pathname'
+    ENV['BUNDLE_GEMFILE'] ||= File.expand_path("../../Gemfile",
+      Pathname.new(__FILE__).realpath)
+
+    require 'rubygems'
+    require 'bundler/setup'
+
+    if ENV['RAILS_ENV'] == 'staging' || ENV['RAILS_ENV'] == 'production'
+      gem_name = 'passenger-enterprise-server'
+    else
+      gem_name = 'passenger'
+    end
+
+    bin_dir = Gem.loaded_specs[gem_name].bin_dir
+    load File.join(bin_dir, 'passenger')
+
+Make it executable:
+
+    chmod +x bin/passenger
+
+Third, modify your Procfile to use `./bin/passenger` instead of `passenger`. Replace this...
+
+    web: bundle exec passenger start -p $PORT ...
+
+...with this:
+
+    web: bundle exec ./bin/passenger start -p $PORT ...
+
+Install the gem bundle and commit the result:
+
+    bundle install
+    git add Gemfile Gemfile.lock Procfile bin/passenger
+    git commit -a -m "Use Passenger Enterprise only in staging and production"
+
+You can test the binstub locally as follows:
+
+    $ ./bin/passenger --version
+    Phusion Passenger 5.0.22
+    $ RAILS_ENV=production ./bin/passenger --version
+    Phusion Passenger Enterprise 5.0.22
 
 ## Next steps
 
