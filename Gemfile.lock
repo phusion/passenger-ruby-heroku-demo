@@ -4,7 +4,7 @@ GEM
     passenger (6.0.2)
       rack
       rake (>= 0.8.1)
-    rack (1.6.8)
+    rack (1.6.11)
     rake (12.3.1)
     sinatra (1.1.0)
       rack (~> 1.1)
