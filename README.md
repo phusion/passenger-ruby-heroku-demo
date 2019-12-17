@@ -67,6 +67,13 @@ Open your app's Procfile, or create one if you don't already have one. Remove li
     web: bundle exec thin start -p $PORT
     web: bundle exec puma -p $PORT
 
+If you depend on Omniauth to authenticate with Facebook, G+, etc you must add the following lines to your `config/application.rb`:
+
+    config.autoload_paths += Dir["#{config.root}/lib"]
+    config.middleware.insert_before Rails::Rack::Logger, "HerokuNginxHeadersMiddleware"
+
+Copy the `lib/heroku_nginx_headers_middleware.rb` to the `lib` directory in your Rails app.
+
 Insert:
 
     web: bundle exec passenger start -p $PORT --max-pool-size 3
