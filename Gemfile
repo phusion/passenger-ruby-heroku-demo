@@ -1,3 +1,3 @@
 source 'https://rubygems.org'
 gem 'sinatra', '1.1.0'
-gem 'passenger', '>= 6.0.12'
+gem 'passenger', '>= 6.0.13'
