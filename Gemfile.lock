@@ -1,22 +1,29 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
     passenger (6.0.14)
       rack
       rake (>= 0.8.1)
-    rack (1.6.11)
+    rack (2.2.3)
+    rack-protection (2.2.0)
+      rack
     rake (12.3.1)
-    sinatra (1.1.0)
-      rack (~> 1.1)
-      tilt (~> 1.1)
-    tilt (1.4.1)
+    ruby2_keywords (0.0.5)
+    sinatra (2.2.0)
+      mustermann (~> 1.0)
+      rack (~> 2.2)
+      rack-protection (= 2.2.0)
+      tilt (~> 2.0)
+    tilt (2.0.10)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   passenger (>= 6.0.14)
-  sinatra (= 1.1.0)
+  sinatra (= 2.2.0)
 
 BUNDLED WITH
    1.16.1
