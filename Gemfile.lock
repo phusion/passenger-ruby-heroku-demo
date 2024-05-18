@@ -6,7 +6,7 @@ GEM
     passenger (6.0.22)
       rack
       rake (>= 0.8.1)
-    rack (2.2.8)
+    rack (2.2.9)
     rack-protection (2.2.4)
       rack
     rake (13.1.0)
@@ -20,6 +20,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-22
+  x86_64-linux
 
 DEPENDENCIES
   passenger (>= 6.0.22)
