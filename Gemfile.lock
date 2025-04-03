@@ -3,7 +3,7 @@ GEM
   specs:
     mustermann (2.0.2)
       ruby2_keywords (~> 0.0.1)
-    passenger (6.0.26)
+    passenger (6.0.27)
       rack
       rake (>= 0.8.1)
     rack (2.2.8)
@@ -22,7 +22,7 @@ PLATFORMS
   x86_64-darwin-22
 
 DEPENDENCIES
-  passenger (>= 6.0.26)
+  passenger (>= 6.0.27)
   sinatra (~> 2.2.0)
 
 BUNDLED WITH
