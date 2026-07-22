@@ -6,7 +6,7 @@ Phusion Passenger for Heroku brings *the power of Nginx* to your dynos. Nginx is
 
 <center><a href="https://www.phusionpassenger.com/"><img src="http://blog.phusion.nl/wp-content/uploads/2009/04/nginx_passenger_eyecatcher.png" height="150"></a></center>
 
-<center><a href="http://vimeo.com/phusionnl/review/80475623/c16e940d1f"><img src="http://blog.phusion.nl/wp-content/uploads/2014/01/gameofthrones.jpg" height="250"></a></center>
+<center><a href="https://youtu.be/GMr7iZ-0ZnI"><img src="http://blog.phusion.nl/wp-content/uploads/2014/01/gameofthrones.jpg" height="250"></a></center>
 
 Here's a list of the benefits that using Phusion Passenger will bring you:
 
